@@ -1,6 +1,10 @@
 # Whitelist Mode
 /*
 
+# GitHub
+
+!.github
+
 # Git File
 !.gitignore
 
