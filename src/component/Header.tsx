@@ -60,8 +60,8 @@ function Header(props: HeaderProps) {
   const title = (
     <div className={Style.title}>
       <div>
-        <span>MM2BC</span>
-        <span className={Style.titleSuffixBig}>&nbsp;-&nbsp;MCBBS Markdown To BBCode Converter</span>
+        <span>MD2BC</span>
+        <span className={Style.titleSuffixBig}>&nbsp;-&nbsp;Markdown To BBCode Converter (for PCBeta)</span>
       </div>
       <div style={{ paddingLeft: '1px' }}>
         <span className={Style.titleSuffixSmall}>MCBBS Markdown To BBCode Converter</span>
