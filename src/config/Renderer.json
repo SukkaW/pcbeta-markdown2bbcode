@@ -39,7 +39,7 @@
         "codespan": "[size=13px][font=Monaco,Consolas,'Lucida Console','Courier New',serif][backcolor=#dedede]${code}[/backcolor][/font][/size]",
         "br": "[br][br]",
         "del": "[s]${text}[/s]",
-        "link": "[url=${href}]${text}[/url]",
+        "link": "${text} [size=13px]([font=Monaco,Consolas,'Lucida Console','Courier New',serif]${href}[/font])[/size] ",
         "image": "[img]${href}[/img]",
         "text": "${text}"
     },
@@ -61,7 +61,7 @@
         "codespan": "[font=Monaco,Consolas,'Lucida Console','Courier New',serif][backcolor=#dedede]${code}[/backcolor][/font]",
         "br": "[br][br]",
         "del": "[s]${text}[/s]",
-        "link": "[url=${href}]${text}[/url]",
+        "link": "${text} [size=13px]([font=Monaco,Consolas,'Lucida Console','Courier New',serif]${href}[/font])[/size] ",
         "image": "[img]${href}[/img]",
         "text": "${text}"
     }
