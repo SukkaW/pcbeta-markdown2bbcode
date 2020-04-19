@@ -85,6 +85,8 @@ function Config(props: ConfigProps) {
         <p>
           Author:&nbsp;zzzz
           (Github:&nbsp;<AuthorGitHub />,&nbsp;MCBBS:&nbsp;<AuthorMCBBS />).
+          <br />
+          Modified by <ModifierGitHub />,&nbsp;PCBeta:&nbsp;<ModifierPCBeta />.
         </p>
         <p>
           Source Code on <SourceCodeGitHub />, under <SourceCodeLicense />.
@@ -92,50 +94,9 @@ function Config(props: ConfigProps) {
         <p>
           Powered by <ByReact /> and <ByMaterialUI />.
         </p>
-        <Watching images={props.images} />
       </Dialog>
     </div>
   )
-}
-
-interface WatchingProps {
-  images: {
-    [key: string]: string
-  }
-}
-
-function Watching(props: WatchingProps) {
-  const [state, setState] = React.useState({
-    showHunluan: true,
-    showRom718: false
-  })
-
-  if (state.showHunluan && state.showRom718) {
-    return (
-      <div>
-        <p><HunluanImg images={props.images} /><Rom718Img images={props.images} /></p>
-        <HunluanAndRom718>Hunluan and Rom718 are watching you!</HunluanAndRom718>
-      </div>
-    )
-  } else if (state.showRom718) {
-    const onChange = () => setState({ showHunluan: true, showRom718: true })
-    return (
-      <div>
-        <p><Rom718Img images={props.images} /></p>
-        <Rom718><span onClick={onChange}>Rom718 is watching you!</span></Rom718>
-      </div>
-    )
-  } else if (state.showHunluan) {
-    const onChange = () => setState({ showHunluan: false, showRom718: true })
-    return (
-      <div>
-        <p><HunluanImg images={props.images} /></p>
-        <Hunluan><span onClick={onChange}>Hunluan is watching you!</span></Hunluan>
-      </div>
-    )
-  } else {
-    return <div></div>
-  }
 }
 
 interface ConfigMenuProps {
@@ -170,9 +131,18 @@ function AuthorGitHub(props: {}) {
   return <AboutLink href='https://github.com/ustc-zzzz'>@ustc-zzzz</AboutLink>
 }
 
+function ModifierGitHub(props: {}) {
+  return <AboutLink href='https://github.com/SukkaW'>@SukkaW</AboutLink>
+}
+
 function AuthorMCBBS(props: {}) {
   const href = 'https://www.mcbbs.net/?1480882'
   return <AboutLink href={href}>@ustc_zzzz</AboutLink>
+}
+
+function ModifierPCBeta(props: {}) {
+  const href = 'http://i.pcbeta.com/space-uid-4864259.html'
+  return <AboutLink href={href}>@sukka</AboutLink>
 }
 
 function SourceCodeGitHub(props: {}) {
