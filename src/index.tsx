@@ -68,6 +68,11 @@ function getRenderer(preset: string) {
       renderer[key] = func
     }
   }
+
+  Marked.setOptions({
+    breaks: true
+  });
+
   return Object.assign(new Marked.Renderer(), renderer)
 }
 
